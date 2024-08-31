@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import type {} from "ldrs";
+
 export default async function Home() {
   return (
     <div className="flex h-[200vh] flex-col gap-8">
@@ -18,8 +19,13 @@ export default async function Home() {
       {/* <l-spiral color={"white"}></l-spiral> */}
       <div>
         damage weigh brush experience five sold same plus matter log origin
-        elephant paragraph foot fully development seat ear reason including
-        rising needs symbol trackk
+        elephant <span className="text-green-400">paragraph</span>{" "}
+        <span className="text-orange-400">foot</span>{" "}
+        <span className="text-violet-400">fully</span>{" "}
+        <span className="text-yellow-400">development</span>{" "}
+        <span className="text-blue-400">seat</span> ear{" "}
+        <span className="text-slate-900 dark:text-slate-100">reason</span>{" "}
+        including rising needs symbol trackk
       </div>
       <div className="text-red-500 dark:text-red-400">
         date return worse south consonant shout bigger exact wet his silent
@@ -51,7 +57,7 @@ export const Container = ({ children, className }: ContainerProps) => {
     <div className="flex h-full w-full items-center justify-center">
       <div
         className={cn(
-          "flex w-[93%] items-center justify-center pt-40 md:w-[80%] lg:w-[70%]",
+          "flex w-[93%] items-center justify-center md:w-[80%] lg:w-[70%]",
           className,
         )}
       >
