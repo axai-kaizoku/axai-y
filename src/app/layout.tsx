@@ -7,8 +7,9 @@ import { TRPCReactProvider } from "@/trpc/react";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { Container } from "./page";
-import Header from "@/components/header";
+// import Header from "@/components/header";
 import { Github, Instagram, LinkedIn, Twitter } from "@/constants/socials";
+import { Header } from "@/components/head/header";
 
 export const metadata: Metadata = {
   title: "Axai Y",

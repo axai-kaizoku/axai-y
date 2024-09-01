@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DesktopNav from "./header.desktop-nav";
+import MobileNav from "./header.mobile-nav";
 
 const Header = () => {
   return (
@@ -12,6 +13,7 @@ const Header = () => {
             </div>
           </Link>
           <DesktopNav classname="hidden lg:flex" />
+          <MobileNav classname="flex lg:hidden" />
         </div>
       </header>
       <div className="pointer-events-none h-40 w-full" />
