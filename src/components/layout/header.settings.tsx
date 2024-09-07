@@ -3,7 +3,7 @@ import { ToggleTheme } from "../darkmode-icon";
 import { SiGithub } from "@react-icons/all-files/si/SiGithub";
 import { Button } from "../ui/button";
 
-export default function ProfileNav({ showNav }: { showNav?: boolean }) {
+export default function ProfileNav() {
   return (
     <div className="z-[1000000] flex items-center gap-3">
       <ToggleTheme />

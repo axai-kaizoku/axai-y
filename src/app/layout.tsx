@@ -7,9 +7,8 @@ import { TRPCReactProvider } from "@/trpc/react";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { Container } from "./page";
-// import Header from "@/components/header";
-import { Github, Instagram, LinkedIn, Twitter } from "@/constants/socials";
-import { Header } from "@/components/head/header";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Axai Y",
@@ -40,30 +39,6 @@ export default function RootLayout({
     </html>
   );
 }
-
-const Footer = () => {
-  return (
-    <footer className="flex w-full items-center justify-center py-10">
-      <div className="flex w-[93%] justify-between md:w-[80%] lg:w-[70%]">
-        <span className="font-extralight">&copy; All rights reserved.</span>
-        <ul className="flex gap-4">
-          <li>
-            <Instagram />
-          </li>
-          <li>
-            <Twitter />
-          </li>
-          <li>
-            <LinkedIn />
-          </li>
-          <li>
-            <Github />
-          </li>
-        </ul>
-      </div>
-    </footer>
-  );
-};
 
 const ScreenSize = () => {
   return (
