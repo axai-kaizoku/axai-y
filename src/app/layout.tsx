@@ -6,9 +6,9 @@ import { type Metadata } from "next";
 import { TRPCReactProvider } from "@/trpc/react";
 import { ThemeProvider } from "@/components/theme-provider";
 
-import { Container } from "./page";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+import { Container } from "@/components/layout/container";
 
 export const metadata: Metadata = {
   title: "Axai Y",
