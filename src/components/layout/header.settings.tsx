@@ -13,7 +13,7 @@ export default function ProfileNav() {
       >
         <SiGithub className="h-5 w-5" />
       </Link>
-      <Button className="hidden lg:flex">{`Let's Work`}</Button>
+      <Button className="hidden md:flex">{`Let's Work`}</Button>
     </div>
   );
 }
