@@ -1,15 +1,19 @@
+import { Button } from "@/components/ui/button";
+
 export default async function Home() {
   return (
     <div className="flex h-[200vh] w-full flex-col gap-8">
       {/* First Container */}
-      <div className="relative flex w-full flex-col justify-between md:flex-row">
-        <div className="absolute z-0 flex h-full w-full items-end justify-center backdrop-blur-md">
-          <div className="h-40 w-40 rounded-3xl bg-slate-400"></div>
-        </div>
-        <div className="z-10 flex w-full flex-col gap-2 md:w-[60%]">
+      <div className="flex h-fit w-full flex-col justify-between lg:h-[30%] lg:flex-row">
+        {/* <div className="z-0 flex h-full w-full items-end justify-evenly">
+          <div className="h-20 w-20"></div>
+          <div className="mb-0 shadow-[-60px_-4px_400px_60px] shadow-[#1cefa9] h-20 w-20 rounded-3xl bg-slate-400"></div>
+        </div> */}
+        <div className="flex w-full flex-col gap-2 lg:w-[60%]">
           <span className="font-semibold">Welcome to my site.</span>
           <h1 className="text-6xl font-black tracking-tighter">
-            {`I'm Akshay Yelle, a Fullstack developer.`}
+            I&apos;m Akshay Yelle, a Fullstack developer
+            <span className="font-mono">.</span>
           </h1>
           <ul className="flex items-center gap-3">
             <li>Nextjs</li>
@@ -26,18 +30,27 @@ export default async function Home() {
             and programming languages. Currently I'm learning framer-motion.`}
           </p>
           <div className="flex gap-4">
-            <button>{`Let's work`}</button>
-            <button>Resume</button>
+            <Button>{`Let's work`}</Button>
+            <Button>Resume</Button>
           </div>
         </div>
-        <div className="z-10 flex w-full items-end justify-end md:w-[37%]">
-          <div className="flex h-full w-full items-center justify-center border">
+        <div className="flex h-full w-full items-end justify-end pt-32 lg:w-[37%]">
+          <div className="flex h-80 w-full items-center justify-center rounded-lg bg-zinc-800 text-white transition-all duration-300 dark:bg-zinc-200 dark:text-black">
             Code`
           </div>
         </div>
       </div>
-      <div>Photos + About</div>
-      <div>Portfolio</div>
+      <div className="hidden lg:h-20" />
+      {/* Second Container */}
+      <div className="flex h-fit w-full flex-col lg:h-[30%]" id="about">
+        <div className="h-24" />
+        <div className="h-60 w-full bg-blue-300"></div>
+      </div>
+      {/* Third Contaniner */}
+      <div className="flex h-fit w-full flex-col lg:h-[30%]" id="portfolio">
+        <div className="h-24" />
+        <div className="h-60 w-full bg-muted"></div>
+      </div>
     </div>
   );
 }
