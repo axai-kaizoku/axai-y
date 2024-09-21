@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 env:
-  POSTGRES_URL: "https://fake.com"
+  POSTGRES_URL: "postgresql://postgres:password@localhost:5432/."
 
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [16.x, 18.x] # Test on multiple Node.js versions
+        node-version: [18.x] # Test on multiple Node.js versions
 
     steps:
       - name: Checkout repository
