@@ -38,6 +38,7 @@ export default function DesktopNav() {
   return (
     <div className="hidden flex-wrap gap-4 md:flex">
       <Tabs
+        className="border-red-200"
         variant="light"
         aria-label="Desktop Navigation"
         selectedKey={selected}
