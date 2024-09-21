@@ -15,6 +15,7 @@ on:
 env:
   POSTGRES_URL: "postgresql://postgres:password@localhost:5432/."
   NODE_ENV: "production"
+  SKIP_ENV_VALIDATION: "true"
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
