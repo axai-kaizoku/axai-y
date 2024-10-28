@@ -45,10 +45,10 @@ const DarkmodeIcon: FC<DarkmodeIconProps> = ({ isDark }) => {
   const pathLengthMoon = useTransform(scaleMoon, [0.6, 1], [0, 1]);
   const pathLengthSun = useTransform(scaleSun, [0.6, 1], [0, 1]);
 
-  useEffect(() => {
-    scaleMoon.set(isDark ? 1 : 0);
-    scaleSun.set(isDark ? 0 : 1);
-  }, [isDark, scaleMoon, scaleSun]);
+  // useEffect(() => {
+  //   scaleMoon.set(isDark ? 1 : 0);
+  //   scaleSun.set(isDark ? 0 : 1);
+  // }, [isDark, scaleMoon, scaleSun]);
 
   return (
     <motion.div animate={isDark ? "checked" : "unchecked"}>
