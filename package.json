@@ -1,8 +1,9 @@
 {
-  "name": "withouttrpc",
+  "name": "axai-y",
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "homepage": "https://axai-kaizoku.github.io/axai-y",
   "scripts": {
     "build": "next build",
     "dev": "next dev",

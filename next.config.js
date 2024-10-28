@@ -12,6 +12,8 @@ const config = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  basePath: "/axai-y",
+  assetPrefix: "/axai-y/",
 };
 
 export default config;
