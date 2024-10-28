@@ -40,7 +40,7 @@ export default function DesktopNav() {
         ? router.replace(routes[selected])
         : router.push(routes[selected]);
     }
-  }, [selected, router]);
+  }, [selected]);
 
   return (
     <div className="hidden flex-wrap gap-4 md:flex">

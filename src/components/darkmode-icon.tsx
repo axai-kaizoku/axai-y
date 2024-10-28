@@ -2,7 +2,7 @@
 
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useTheme } from "next-themes";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import type { FC } from "react";
 
 export const ToggleTheme: FC = () => {
