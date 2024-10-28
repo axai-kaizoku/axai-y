@@ -11,6 +11,13 @@ export default function DesktopNav() {
   const router = useRouter();
   const pathname = usePathname();
 
+  const routes: Routes = {
+    Home: "/",
+    About: "/#about",
+    Portfolio: "/#portfolio",
+    Resume: "/resume",
+  };
+
   // Initialize state based on the current path
   const [selected, setSelected] = useState<TabOption>(() => {
     if (pathname === "/") return "Home";
@@ -21,19 +28,13 @@ export default function DesktopNav() {
   });
 
   useEffect(() => {
-    const routes: Routes = {
-      Home: "/",
-      About: "/#about",
-      Portfolio: "/#portfolio",
-      Resume: "/resume",
-    };
-
-    if (routes[selected]) {
+    // Prevent re-routing if the path matches the selected route
+    if (routes[selected] !== pathname) {
       selected === "Resume"
         ? router.replace(routes[selected])
         : router.push(routes[selected]);
     }
-  }, [selected, router]);
+  }, [selected, router, pathname]); // Add pathname to dependency array
 
   return (
     <div className="hidden flex-wrap gap-4 md:flex">

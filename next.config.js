@@ -4,6 +4,8 @@
  */
 await import("./src/env.js");
 
+const isProd = process.env.NODE_ENV === "production";
+
 /** @type {import("next").NextConfig} */
 const config = {
   typescript: {
@@ -12,7 +14,7 @@ const config = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  basePath: "/axai-y",
+  basePath: isProd ? "/axai-y" : "",
 };
 
 export default config;
