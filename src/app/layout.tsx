@@ -3,7 +3,6 @@ import "@/styles/globals.css";
 import { GeistSans } from "geist/font/sans";
 import { type Metadata } from "next";
 
-import { TRPCReactProvider } from "@/trpc/react";
 import { ThemeProvider } from "@/components/theme-provider";
 
 import { Header } from "@/components/layout/header";
@@ -28,12 +27,10 @@ export default function RootLayout({
           src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/spiral.js"
         ></script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <TRPCReactProvider>
-            <Header />
-            <ScreenSize />
-            <Container>{children}</Container>
-            <Footer />
-          </TRPCReactProvider>
+          <Header />
+          <ScreenSize />
+          <Container>{children}</Container>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

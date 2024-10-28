@@ -6,7 +6,7 @@ import DesktopNav from "./header.desktop-nav";
 import ProfileNav from "./header.settings";
 import MobileNav from "./header.mobile-nav";
 
-export const Header = ({}) => {
+export const Header = () => {
   const [showNav, setShowNav] = useState(false);
 
   return (
