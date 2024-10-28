@@ -28,12 +28,12 @@ export default function DesktopNav() {
   });
 
   useEffect(() => {
-    if (routes[selected]) {
+    if (routes[selected] !== pathname) {
       selected === "Resume"
         ? router.replace(routes[selected])
         : router.push(routes[selected]);
     }
-  }, [selected]);
+  }, [selected, router, pathname]);
 
   return (
     <div className="hidden flex-wrap gap-4 md:flex">
