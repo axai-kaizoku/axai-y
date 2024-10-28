@@ -11,7 +11,7 @@ export default function DesktopNav() {
   const router = useRouter();
   const pathname = usePathname();
 
-  const mainRoutes: Routes = {
+  const routes: Routes = {
     Home: "/",
     About: "/#about",
     Portfolio: "/#portfolio",
@@ -28,13 +28,6 @@ export default function DesktopNav() {
   });
 
   useEffect(() => {
-    const routes: Routes = {
-      Home: "/",
-      About: "/#about",
-      Portfolio: "/#portfolio",
-      Resume: "/resume",
-    };
-
     if (routes[selected]) {
       selected === "Resume"
         ? router.replace(routes[selected])
