@@ -13,7 +13,7 @@ const config = {
     ignoreDuringBuilds: true,
   },
   basePath: "/axai-y",
-  assetPrefix: "/axai-y/",
+  assetPrefix: "./",
 };
 
 export default config;
