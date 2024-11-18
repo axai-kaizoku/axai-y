@@ -1,6 +1,5 @@
-import Link from "next/link";
-import { ToggleTheme } from "../darkmode-icon";
-import { Button } from "../ui/button";
+import Link from "next/link"
+import { ToggleTheme } from "../darkmode-icon"
 
 export default function Header() {
   return (
@@ -9,19 +8,19 @@ export default function Header() {
         <nav className="flex items-center gap-x-3">
           <Link
             href="/"
-            className="ring-1 dark:ring-slate-50 ring-slate-800 rounded-full size-12 mr-6 items-center flex justify-center"
+            className="ring-1 dark:ring-slate-100 ring-slate-800 rounded-full size-10 sm:size-12 mr-2.5 sm:mr-6 items-center flex justify-center"
           >
             /
           </Link>
           <Link href="/changelog">changelog</Link>
           <Link href="/blog">blog</Link>
         </nav>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 sm:gap-6">
           <ToggleTheme />
-          <Button>get in touch</Button>
+          <button>get in touch</button>
         </div>
       </header>
       <div className="h-24 pointer-events-none" />
     </>
-  );
+  )
 }

@@ -1,12 +1,15 @@
-import { isProd } from "@/lib/utils";
-import Image from "next/image";
+import ScrollDown from "@/components/layout/scroll-down"
+import { isProd } from "@/lib/utils"
+import Image from "next/image"
 
 export default function Home() {
   return (
     <>
       {/* section 1 */}
       <section className="flex h-dvh justify-center items-center w-full flex-col gap-8">
-        <h1 className="text-7xl/9 font-black font-mono">Akshay Yelle.</h1>
+        <h1 className="text-5xl/6 sm:text-7xl/9 font-black font-mono">
+          Akshay Yelle.
+        </h1>
         <p>Full Stack Dev.</p>
         <Image
           width={200}
@@ -15,8 +18,9 @@ export default function Home() {
           alt="star"
         />
       </section>
+
       {/* section 2 */}
-      <section id="about" className="w-[80%] pl-20 space-y-8">
+      <section id="about" className="w-[80%] pl-6 sm:pl-20 space-y-8">
         <div>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi rem
           magnam nisi quaerat corrupti sequi temporibus, vel in id suscipit ex
@@ -44,6 +48,9 @@ export default function Home() {
           elit. Porro obcaecati maxime voluptatum temporibus in p
         </div>
       </section>
+
+      {/* scroll btn */}
+      <ScrollDown />
     </>
-  );
+  )
 }
