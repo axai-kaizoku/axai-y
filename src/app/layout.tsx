@@ -28,7 +28,7 @@ export default function RootLayout({
         ></script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <ScreenSize />
+          {/* <ScreenSize /> */}
           <Container>{children}</Container>
           <Footer />
         </ThemeProvider>

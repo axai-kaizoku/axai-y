@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="flex w-full items-center justify-center py-10">
       <div className="flex w-[93%] flex-col-reverse items-center justify-between md:w-[80%] md:flex-row lg:w-[70%]">
-        <span className="font-extralight text-slate-500">
+        <span className="font-extralight text-slate-600 dark:text-slate-400/60">
           &copy; {year} Akshay Yelle, All rights reserved.
         </span>
         <ul className="flex gap-4">
