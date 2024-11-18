@@ -1,32 +1,27 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
-import DesktopNav from "./header.desktop-nav";
-import ProfileNav from "./header.settings";
-import MobileNav from "./header.mobile-nav";
+import { ToggleTheme } from "../darkmode-icon";
+import { Button } from "../ui/button";
 
-export const Header = () => {
-  const [showNav, setShowNav] = useState(false);
-
+export default function Header() {
   return (
     <>
-      <header className="fixed inset-x-0 top-0 flex w-full items-center justify-center border-b border-gray-800/10 bg-white/50 backdrop-blur-sm dark:border-gray-100/10 dark:bg-gray-900/40">
-        <div className="flex w-[93%] items-center justify-between py-6 md:w-[80%] lg:w-[70%]">
+      <header className="flex fixed z-10 top-0 justify-between items-center w-full p-5 sm:p-6 backdrop-blur-sm">
+        <nav className="flex items-center gap-x-3">
           <Link
-            className="z-[100000000] text-lg font-thin sm:text-xl lg:text-2xl"
             href="/"
+            className="ring-1 dark:ring-slate-50 ring-slate-800 rounded-full size-12 mr-6 items-center flex justify-center"
           >
-            axai-y
+            /
           </Link>
-          <DesktopNav />
-          <div className="z-[1000000] flex items-center">
-            <ProfileNav />
-            <MobileNav showNav={showNav} setShowNav={setShowNav} />
-          </div>
+          <Link href="/changelog">changelog</Link>
+          <Link href="/blog">blog</Link>
+        </nav>
+        <div className="flex items-center gap-4">
+          <ToggleTheme />
+          <Button>get in touch</Button>
         </div>
       </header>
-      <div className="pointer-events-none h-40 select-none transition print:hidden" />
+      <div className="h-24 pointer-events-none" />
     </>
   );
-};
+}

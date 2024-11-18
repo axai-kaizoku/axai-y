@@ -1,16 +1,20 @@
 "use client";
 
+import { cn } from "@/lib/utils";
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import { useTheme } from "next-themes";
 // import { useEffect } from "react";
 import type { FC } from "react";
 
-export const ToggleTheme: FC = () => {
+export const ToggleTheme = ({ className }: { className?: string }) => {
   const { theme, setTheme } = useTheme();
   const isDark = theme === "dark";
 
   return (
-    <button onClick={() => setTheme(isDark ? "light" : "dark")}>
+    <button
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      className={cn(className)}
+    >
       <DarkmodeIcon isDark={isDark} />
     </button>
   );
@@ -53,8 +57,8 @@ const DarkmodeIcon: FC<DarkmodeIconProps> = ({ isDark }) => {
   return (
     <motion.div animate={isDark ? "checked" : "unchecked"}>
       <motion.svg
-        width="18"
-        height="18"
+        width="20"
+        height="20"
         viewBox="0 0 25 25"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
