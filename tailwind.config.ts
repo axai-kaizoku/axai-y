@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import { fontFamily } from "tailwindcss/defaultTheme"
 
 const config = {
   darkMode: ["class"],
@@ -18,6 +19,10 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        montserrat: ["var(--montserrat)", ...fontFamily.sans],
+        space_grotesk: ["var(--space_grotesk)", ...fontFamily.sans],
+      },
       colors: {
         brand: "#18ff84",
         focus: `#32cd32`,
