@@ -15,6 +15,7 @@ const config = {
     ignoreDuringBuilds: true,
   },
   basePath: isProd ? "/axai-y" : "",
+  assetPrefix: isProd ? "/axai-y" : "",
 };
 
 export default config;

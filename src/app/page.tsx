@@ -1,13 +1,19 @@
+import { isProd } from "@/lib/utils";
 import Image from "next/image";
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
       {/* section 1 */}
       <section className="flex h-dvh justify-center items-center w-full flex-col gap-8">
         <h1 className="text-7xl/9 font-black font-mono">Akshay Yelle.</h1>
         <p>Full Stack Dev.</p>
-        <Image width={200} height={200} src="/star.svg" alt="star" />
+        <Image
+          width={200}
+          height={200}
+          src={isProd() ? "/axai-y/star.svg" : "/star.svg"}
+          alt="star"
+        />
       </section>
       {/* section 2 */}
       <section id="about" className="w-[80%] pl-20 space-y-8">
