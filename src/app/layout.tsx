@@ -5,13 +5,13 @@ import { type Metadata } from "next";
 
 import { ThemeProvider } from "@/components/theme-provider";
 
-import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { Container } from "@/components/layout/container";
+import Header from "@/components/layout/header";
+import ScrollDown from "@/components/layout/scroll-down";
 
 export const metadata: Metadata = {
   title: "Axai Y",
-  description: "I love Typescript!",
+  description: "yo 🤘🏻",
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
@@ -21,15 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.className}`}>
       <body>
-        <script
-          type="module"
-          defer
-          src="https://cdn.jsdelivr.net/npm/ldrs/dist/auto/spiral.js"
-        ></script>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          {/* <ScreenSize /> */}
-          <Container>{children}</Container>
+          <main className="min-h-dvh">{children}</main>
+          <ScrollDown />
           <Footer />
         </ThemeProvider>
       </body>
