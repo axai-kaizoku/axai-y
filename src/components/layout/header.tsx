@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { ToggleTheme } from "../darkmode-icon"
+import { buttonVariants } from "../ui/button"
 
 export default function Header() {
   return (
@@ -12,12 +13,21 @@ export default function Header() {
           >
             /
           </Link>
-          <Link href="/changelog">changelog</Link>
-          <Link href="/blog">blog</Link>
+          <Link
+            href="/changelog"
+            className={buttonVariants({ variant: "link" })}
+          >
+            changelog
+          </Link>
+          <Link href="/blog" className={buttonVariants({ variant: "link" })}>
+            blog
+          </Link>
         </nav>
-        <div className="flex items-center gap-2 sm:gap-6">
+        <div className="flex items-center gap-0 sm:gap-0.5">
           <ToggleTheme />
-          <button>get in touch</button>
+          <Link href="/contact" className={buttonVariants({ variant: "link" })}>
+            get in touch
+          </Link>
         </div>
       </header>
       <div className="h-24 pointer-events-none" />

@@ -1,6 +1,8 @@
 import ScrollDown from "@/components/layout/scroll-down"
 import { isProd } from "@/lib/utils"
 import Image from "next/image"
+import Reveal from "./_components/reveal"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -12,10 +14,9 @@ export default function Home() {
           <p className="mb-4 text-sm sm:text-base md:text-xl 2xl:text-3xl">
             Full Stack Dev.
           </p>
-          <div className="pointer-events-none absolute left-[70%] top-[20%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl dark:bg-background lg:left-[65%] lg:top-[30%] lg:size-60 2xl:left-[73%] 2xl:top-[40%] 2xl:size-80" />
-          <div className="pointer-events-none 2xl:-left-[14%] absolute left-[-20%] top-[-40%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl dark:bg-background lg:left-[-15%] lg:top-[-120%] lg:size-40 2xl:-top-[120%] 2xl:size-60" />
+          <div className="pointer-events-none absolute left-[70%] top-[20%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl dark:bg-background lg:left-[60%] lg:top-[30%] lg:size-60 2xl:left-[73%] 2xl:top-[40%] 2xl:size-80" />
+          <div className="pointer-events-none 2xl:-left-[14%] absolute left-[-20%] top-[-40%] h-20 w-20 rounded-full bg-white opacity-80 blur-2xl dark:bg-background lg:left-[-15%] lg:top-[-105%] lg:size-40 2xl:-top-[120%] 2xl:size-60" />
         </div>
-
         <div className="absolute translate-y-[100px] md:translate-y-[150px]">
           <Image
             className="pointer-events-none h-[200px] w-[200px] select-none dark:brightness-200 lg:h-[300px] lg:w-[300px]"
@@ -28,33 +29,70 @@ export default function Home() {
       </section>
 
       {/* section 2 */}
-      <section id="about" className="w-[80%] pl-6 sm:pl-20 space-y-8">
-        <div>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi rem
-          magnam nisi quaerat corrupti sequi temporibus, vel in id suscipit ex
-          accusamus fugiat voluptas ullam beatae sapiente quidem nulla laborum.
-        </div>
-        <div>
-          Lorem ipsum, dolor sit amelorem Lorem ipsum dolor sit, amet
-          consectetur adipisicing elit. Maiores ipsam natus quae eos magni.
-          Mollitia voluptatum iure tempora autem maxime beatae et officiis
-          nesciunt perferendis dolorum, Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Numquam inventore modi qui accusantium obcaecati
-          voluptate veritatis minus delectus tempora soluta? Consequuntur,
-          incidunt voluptatibus. Quae iusto, repellat repellendus consequatur
-          aliquid eveniet?perspiciatis, quam dolore ipsam.ae sapiente quidem
-          nulla laborum.
-        </div>
-        <div>
-          Lorem igiat voluptas ullam beatae sapiente quidem nulla laborum.
-        </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-          numquam totam neque et aspernatur sapiente tatibus ipsam molestiae!
-          Nulla reiciendis hic sapiente, quidem corporis excepturi laboriosam
-          ducimus natus. Lorem ipsum dolor sit, amet consectetur adipisicing
-          elit. Porro obcaecati maxime voluptatum temporibus in p
-        </div>
+      <section className="mb-10">
+        <h2 id="currently_cooking" className="mb-4 pt-10 text-3xl font-bold">
+          currently cooking 🧑🏻‍🍳
+        </h2>
+        <ul className="list-disc pl-5">
+          <li>Asset Management ( SaaS )</li>
+          <li>React Native</li>
+          <li>Framer motion</li>
+        </ul>
+        <hr className="my-10 dark:border-neutral-700" />
+      </section>
+      {/* section 3 */}
+      <section id="resume-area" className="mb-20">
+        <h2 className="mb-10 text-3xl font-bold">Resume Area 📝</h2>
+        <Reveal>
+          <h2 className="mb-4 text-2xl font-bold">Skills</h2>
+          <h3 className="w-fit bg-amber-100 font-bold dark:bg-amber-900">
+            Programming Languages_
+          </h3>
+          <p>JavaScript/TypeScript, Python and Java</p>
+          <h3 className="w-fit bg-amber-100 dark:bg-amber-900 font-bold">
+            Technologies_
+          </h3>
+
+          <p>
+            HTML, CSS, SQL, MongoDB, VS-Code, Git, Github and all operating
+            systems
+          </p>
+          <h3 className="w-fit bg-amber-100 font-bold dark:bg-amber-900">
+            Frameworks_
+          </h3>
+          <p>
+            React, Next.js, Express, Zod, Auth.js, TailwindCSS, Saas, Drizzle
+          </p>
+        </Reveal>
+
+        <hr className="my-10 dark:border-neutral-700" />
+        <Reveal>
+          <h2 className="font-bold text-2xl mb-4">Work & Experience</h2>
+          <h3 className="w-fit bg-fuchsia-100 font-bold dark:bg-fuchsia-900">
+            Work_
+          </h3>
+          <p className="mb-1">
+            see{" "}
+            <Link className="text-fuchsia-900 underline" href="/changelog">
+              changelog
+            </Link>
+          </p>
+          <h3 className="w-fit bg-fuchsia-100 font-bold dark:bg-fuchsia-900">
+            Strength_
+          </h3>
+          <p className="mb-1">Fullstack CRUD Applications in Next.js, MERN</p>
+
+          <h3 className="w-fit bg-fuchsia-100 font-bold dark:bg-fuchsia-900">
+            Else_
+          </h3>
+          <p className="mb-1">
+            Shell scripting (bash, zsh), algorithms and data structures
+          </p>
+        </Reveal>
+        <hr className="my-10 dark:border-neutral-700" />
+        {/* 0b986b */}
+
+        {/* Projects and Else */}
       </section>
 
       {/* scroll btn */}

@@ -34,6 +34,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
+        "min-h-dvh overflow-x-hidden bg-background font-space_grotesk text-foreground antialiased",
         GeistSans.className,
         montserrat.variable,
         space_grotesk.variable
@@ -42,7 +43,7 @@ export default function RootLayout({
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          <main className="min-h-dvh">{children}</main>
+          <main className="px-8 md:px-10">{children}</main>
           <ScreenSize />
           <Footer />
         </ThemeProvider>
