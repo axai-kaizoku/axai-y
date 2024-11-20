@@ -65,8 +65,8 @@ export default function Home() {
           </p>
         </Reveal>
 
-        <hr className="my-10 dark:border-neutral-700" />
         <Reveal>
+          <hr className="my-10 dark:border-neutral-700" />
           <h2 className="font-bold text-2xl mb-4">Work & Experience</h2>
           <h3 className="w-fit bg-fuchsia-100 font-bold dark:bg-fuchsia-900">
             Work_
@@ -89,8 +89,55 @@ export default function Home() {
             Shell scripting (bash, zsh), algorithms and data structures
           </p>
         </Reveal>
-        <hr className="my-10 dark:border-neutral-700" />
         {/* 0b986b */}
+        <Reveal>
+          <hr className="my-10 dark:border-neutral-700" />
+          <h2 className="mb-4 text-2xl font-bold">Projects</h2>
+          <p className="mb-1">
+            <span className="w-fit bg-emerald-100 font-bold dark:bg-emerald-900">
+              Implemented
+            </span>{" "}
+            <br />
+            10+ study projects from small ones like simple crud applications to
+            a whole buy and sell application with auth, payments
+          </p>
+          <p className="mb-1">
+            <span className="w-fit bg-emerald-100 font-bold dark:bg-emerald-900">
+              Engineered
+            </span>{" "}
+            <br />
+            my own website ( tried many designs )
+          </p>
+          <p className="mb-1">
+            <span className="w-fit bg-emerald-100 font-bold dark:bg-emerald-900">
+              Coded
+            </span>{" "}
+            <br />
+            PingPanda, a SaaS insights provider, delivering messages to your
+            discord dm
+          </p>
+        </Reveal>
+        <Reveal>
+          <hr className="my-10 dark:border-neutral-700" />
+          <h2 className="mb-4 text-2xl font-bold">Else</h2>
+          <h3 className="w-fit bg-blue-100 font-bold dark:bg-blue-900">
+            Languages_
+          </h3>
+          <p className="mb-1">
+            Telugu (native), English (fluent), Hindi (fluent)
+          </p>
+          <h3 className="w-fit bg-blue-100 font-bold dark:bg-blue-900">
+            since 2022_{" "}
+          </h3>
+          <p className="mb-1">
+            Studied Full Stack Developer course from upGrad and gained some
+            pretty good knowledge, by making projects
+          </p>
+          <h3 className="w-fit bg-blue-100 font-bold dark:bg-blue-900">
+            2024_{" "}
+          </h3>
+          <p className="mb-1">Working as a Frontend Developer in a startup</p>
+        </Reveal>
 
         {/* Projects and Else */}
       </section>
