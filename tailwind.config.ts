@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss";
+import type { Config } from "tailwindcss"
+import { fontFamily } from "tailwindcss/defaultTheme"
 
 const config = {
   darkMode: ["class"],
@@ -18,7 +19,22 @@ const config = {
       },
     },
     extend: {
+      fontFamily: {
+        montserrat: ["var(--montserrat)", ...fontFamily.sans],
+        space_grotesk: ["var(--space_grotesk)", ...fontFamily.sans],
+      },
       colors: {
+        brand: {
+          100: "#d1ffe6",
+          200: "#a3ffce",
+          300: "#74ffb5",
+          400: "#46ff9d",
+          500: "#18ff84",
+          600: "#13cc6a",
+          700: "#0e994f",
+          800: "#0a6635",
+          900: "#05331a",
+        },
         focus: `#32cd32`,
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -76,6 +92,6 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+} satisfies Config
 
-export default config;
+export default config

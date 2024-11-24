@@ -1,31 +1,29 @@
-"use client";
+"use client"
 
-import { cn } from "@/lib/utils";
-import { motion, useMotionValue, useTransform } from "framer-motion";
-import { useTheme } from "next-themes";
-// import { useEffect } from "react";
-import type { FC } from "react";
+import { motion, useMotionValue, useTransform } from "framer-motion"
+import { useTheme } from "next-themes"
+import type { FC } from "react"
 
 export const ToggleTheme = ({ className }: { className?: string }) => {
-  const { theme, setTheme } = useTheme();
-  const isDark = theme === "dark";
+  const { theme, setTheme } = useTheme()
+  const isDark = theme === "dark"
 
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className={cn(className)}
+      className={className}
     >
       <DarkmodeIcon isDark={isDark} />
     </button>
-  );
-};
+  )
+}
 
 interface DarkmodeIconProps {
-  isDark: boolean;
+  isDark: boolean
 }
 
 const DarkmodeIcon: FC<DarkmodeIconProps> = ({ isDark }) => {
-  const duration = 0.7;
+  const duration = 0.7
 
   const moonVariants = {
     checked: {
@@ -34,7 +32,7 @@ const DarkmodeIcon: FC<DarkmodeIconProps> = ({ isDark }) => {
     unchecked: {
       scale: 0,
     },
-  };
+  }
 
   const sunVariants = {
     checked: {
@@ -43,11 +41,11 @@ const DarkmodeIcon: FC<DarkmodeIconProps> = ({ isDark }) => {
     unchecked: {
       scale: 1,
     },
-  };
-  const scaleMoon = useMotionValue(isDark ? 1 : 0);
-  const scaleSun = useMotionValue(isDark ? 0 : 1);
-  const pathLengthMoon = useTransform(scaleMoon, [0.6, 1], [0, 1]);
-  const pathLengthSun = useTransform(scaleSun, [0.6, 1], [0, 1]);
+  }
+  const scaleMoon = useMotionValue(isDark ? 1 : 0)
+  const scaleSun = useMotionValue(isDark ? 0 : 1)
+  const pathLengthMoon = useTransform(scaleMoon, [0.6, 1], [0, 1])
+  const pathLengthSun = useTransform(scaleSun, [0.6, 1], [0, 1])
 
   // useEffect(() => {
   //   scaleMoon.set(isDark ? 1 : 0);
@@ -204,7 +202,7 @@ const DarkmodeIcon: FC<DarkmodeIconProps> = ({ isDark }) => {
         />
       </motion.svg>
     </motion.div>
-  );
-};
+  )
+}
 
-export default DarkmodeIcon;
+export default DarkmodeIcon
