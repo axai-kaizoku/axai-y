@@ -24,7 +24,17 @@ const config = {
         space_grotesk: ["var(--space_grotesk)", ...fontFamily.sans],
       },
       colors: {
-        brand: "#18ff84",
+        brand: {
+          100: "#d1ffe6",
+          200: "#a3ffce",
+          300: "#74ffb5",
+          400: "#46ff9d",
+          500: "#18ff84",
+          600: "#13cc6a",
+          700: "#0e994f",
+          800: "#0a6635",
+          900: "#05331a",
+        },
         focus: `#32cd32`,
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",

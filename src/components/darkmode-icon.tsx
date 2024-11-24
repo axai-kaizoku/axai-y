@@ -1,11 +1,8 @@
 "use client"
 
-import { cn } from "@/lib/utils"
 import { motion, useMotionValue, useTransform } from "framer-motion"
 import { useTheme } from "next-themes"
-// import { useEffect } from "react";
 import type { FC } from "react"
-import { buttonVariants } from "./ui/button"
 
 export const ToggleTheme = ({ className }: { className?: string }) => {
   const { theme, setTheme } = useTheme()
@@ -14,7 +11,7 @@ export const ToggleTheme = ({ className }: { className?: string }) => {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className={cn(buttonVariants({ variant: "link" }), className)}
+      className={className}
     >
       <DarkmodeIcon isDark={isDark} />
     </button>

@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ChevronDown } from "lucide-react"
+import { FaAngleDown } from "@react-icons/all-files/fa/FaAngleDown"
 
 const ScrollDown = () => {
   const [loading, setLoading] = useState(true)
@@ -44,8 +44,8 @@ const ScrollDown = () => {
       href="#currently_cooking"
       className="transition-all"
     >
-      <div className="absolute bottom-6 right-6 rounded-full bg-neutral-800 p-3 sm:p-4 transition-all hover:bg-neutral-700">
-        <ChevronDown className="text-white size-4 sm:size-6" />
+      <div className="absolute bottom-8 right-8 sm:right-16 rounded-full bg-neutral-800 p-3 sm:p-4 transition-all hover:bg-neutral-700">
+        <FaAngleDown className="text-white size-4 sm:size-5" />
       </div>
     </a>
   )
