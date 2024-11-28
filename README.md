@@ -2,7 +2,7 @@
 
 - [x] header ⤴️
 - [x] footer 🔻
-- [ ] make it reponsive 📱
-- [ ] home 🏠
+- [x] make it reponsive 📱
+- [x] home 🏠
 - [ ] changelog 📈
 - [ ] blog 🗞️
