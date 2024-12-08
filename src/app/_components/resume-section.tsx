@@ -9,8 +9,8 @@ export default function ResumeSection() {
           currently cooking 🧑🏻‍🍳
         </h2>
         <ul className="list-disc pl-5">
-          <li>Asset Management ( SaaS )</li>
-          <li>React Native</li>
+          <li>Turf Booking app</li>
+          <li>Device Flow ( SaaS )</li>
           <li>Framer motion</li>
         </ul>
         <hr className="my-10 dark:border-neutral-700" />
