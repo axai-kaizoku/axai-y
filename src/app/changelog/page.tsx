@@ -59,7 +59,7 @@ export default function Changelog() {
       content: (
         <div>
           <p className="mb-8 font-normal text-neutral-800 dark:text-neutral-200">
-            intern at Cynohub, an edu-tech company as a React.js mentor and
+            {/* intern at Cynohub, an edu-tech company as a React.js mentor and
             after that joined as an intern at Edify, built a landing page{" "}
             <Link
               href="https://edify.club"
@@ -68,7 +68,17 @@ export default function Changelog() {
             >
               edify.club
             </Link>{" "}
-            with good performance, trackers, seo and optimization
+            with great performance, trackers, seo and optimization */}
+            intern at Cynohub, an edu-tech company as a React.js Mentor. Later,
+            at Edify built and optimized the{" "}
+            <Link
+              href="https://edify.club"
+              target="_blank"
+              className="underline p-0 m-0 w-fit  font-bold"
+            >
+              edify.club
+            </Link>{" "}
+            landing page for performance, tracking, SEO, and overall efficiency.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
