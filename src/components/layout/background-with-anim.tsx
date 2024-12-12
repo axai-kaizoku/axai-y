@@ -18,7 +18,7 @@ export const BackgroundWithAnim = ({ children }: PropsWithChildren) => {
         </GridBeam>
       </div> */}
 
-      <div className="h-[calc(100vh-100px)] dark:bg-grid-white/[0.02] bg-grid-black/[0.02] flex items-center w-full justify-center overflow-hidden">
+      <div className="max-sm:h-[calc(100vh-30vh)] h-[calc(100vh-100px)] dark:bg-grid-white/[0.02] bg-grid-black/[0.02] flex items-center w-full justify-center overflow-hidden">
         {/* <GridBeam className="flex items-start justify-start" /> */}
         {children}
         {/* <GridBeam className="top-20 left-80" />
