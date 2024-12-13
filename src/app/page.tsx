@@ -6,53 +6,66 @@ import { Star } from "@/components/star-icon"
 import { BackgroundWithAnim } from "@/components/layout/background-with-anim"
 import { TypingEffect } from "./_components/typing-effect"
 import { Beam, GridBeam } from "@/components/ui/grid-beam"
-import { useCallback, useEffect, useState } from "react"
 
 export default function Home() {
+  const classNames = [
+    "h-40 w-40  top-32 left-[22rem] absolute rotate-90",
+    "h-40 w-40 top-96 -left-80 absolute ",
+    "hidden",
+    "h-40 w-40  -bottom-80 left-[44rem] absolute -rotate-180",
+    "h-40 w-40  top-96 -left-40 absolute rotate-180",
+    "h-20 w-40  top-32 -left-60 absolute rotate-180 transform -scale-x-100 ",
+    "h-40 w-40  bottom-10 -right-48 absolute transform -scale-x-100",
+    "hidden",
+    "h-40 w-40  top-80 left-96 absolute transform -scale-x-100 -scale-y-100",
+    "h-32 w-10  -top-60 -left-60 absolute transform rotate-180",
+    "h-32 w-10  -bottom-60 -left-80 absolute transform -scale-x-100",
+    "h-2 w-2  -bottom-80 -left-96 absolute -rotate-90",
+    "hidden",
+    "h-40 w-40  bottom-36 -left-16 absolute rotate-90 transform -scale-y-100",
+    "h-20 w-40  bottom-24 -right-96 absolute ",
+    "h-40 w-40  bottom-0 -right-56 absolute",
+  ]
+
+  const aroundNameSide = [
+    "h-40 w-40  bottom-10 -right-48 absolute transform -scale-x-100",
+    "h-40 w-20  -bottom-20 -right-32 absolute transform -scale-y-100 -scale-x-100",
+    "h-40 w-24  -left-32 -top-20 absolute",
+    "h-40 w-32  -left-36 top-10  absolute transform -scale-y-100",
+  ]
+
+  const aroundNameTop = [
+    "h-40 w-40  bottom-36 -left-16 absolute rotate-90 transform -scale-y-100",
+    "h-40 w-40  top-20 -left-16 absolute rotate-90 transform -scale-x-100 -scale-y-100",
+    "h-40 w-40  bottom-36 left-96 absolute rotate-90",
+    "h-40 w-40  top-20 left-96 absolute rotate-90 transform -scale-x-100",
+  ]
+
   return (
     <>
-      {/* <DemoComponent time={2000} /> */}
       <BackgroundWithAnim>
         <section className="relative flex h-[calc(100vh-100px)] justify-center items-center w-full flex-col">
           <div className="relative flex flex-col items-center justify-center -translate-y-[120px] md:-translate-y-[120px]">
-            {/* <GridBeam className={customClassNames[currentClassIndex]} />
-            <GridBeam className={customClassNames[second]} /> */}
-            {/* <DemoComponent time={2500} repeatDelay={4} /> */}
-            {/* <DemoComponent time={2000} />
-            <DemoComponent time={2000} repeatDelay={4} />
-            <DemoComponent time={2000} repeatDelay={8} /> */}
-            {/* <DemoComponent /> */}
-            {/* <GridBeam
-              className={"h-32 w-10  -bottom-60 -left-80 absolute"}
-              beamOptions={{ repeatDelay: 5, delay: 1, duration: 1.3 }}
-            />
-            <GridBeam
-              className={"h-40 w-40 border top-96 -left-40 absolute rotate-180"}
-              beamOptions={{
-                repeatDelay: 0,
-                delay: 0,
-                duration: 4,
-              }}
-            /> */}
-            {/* <Beam
-              delay={0}
-              duration={2}
-              repeatDelay={0}
-              className="h-32 w-10 -bottom-60 -left-80 absolute border"
-            />
-            <br />
-            <br />
-            <Beam
-              delay={5}
-              duration={5}
-              repeatDelay={2}
-              className="h-40 w-40 border top-96 -left-40 absolute rotate-180"
-            /> */}
-            <DemoComponent />
-            {/* <GridBeam
-              className={"h-32 w-10 border -bottom-60 -left-80 absolute"}
-            /> */}
-            {/* <RandomArrayRenderer /> */}
+            {/* <GridBeam /> */}
+            {aroundNameSide.map((v) => (
+              <Beam
+                key={v}
+                className={v}
+                delay={0}
+                duration={1.8}
+                repeatDelay={0}
+              />
+            ))}
+            {aroundNameTop.map((v) => (
+              <Beam
+                key={v}
+                className={v}
+                delay={0}
+                duration={1.8}
+                repeatDelay={0}
+              />
+            ))}
+
             <TypingEffect />
             <p className="mb-4 text-sm sm:text-base md:text-xl 2xl:text-3xl">
               Full Stack Dev.
@@ -71,158 +84,3 @@ export default function Home() {
     </>
   )
 }
-
-const DemoComponent = () => {
-  const beams = [
-    {
-      className: "h-40 w-40  top-32 left-80 absolute",
-      repeatDelay: 1,
-      delay: 2,
-      duration: 2,
-    },
-    {
-      className: "h-40 w-40  top-96 -left-80 absolute",
-      repeatDelay: 2,
-      delay: 0,
-      duration: 1.5,
-    },
-    { className: "hidden", repeatDelay: 2, delay: 2, duration: 2 },
-    {
-      className: "h-40 w-40  -bottom-80 left-[44rem] absolute rotate-90",
-      repeatDelay: 3,
-      delay: 4,
-      duration: 1.8,
-    },
-    {
-      className: "h-40 w-40  top-96 -left-40 absolute rotate-180",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 0.2,
-    },
-    {
-      className: "h-20 w-40  top-32 left-24 absolute -rotate-180",
-      repeatDelay: 2.5,
-      delay: 1,
-      duration: 2.4,
-    },
-    {
-      className: "h-40 w-40  bottom-14 right-0 absolute",
-      repeatDelay: 1.2,
-      delay: 0,
-      duration: 2.5,
-    },
-    { className: "hidden", repeatDelay: 2, delay: 2, duration: 2 },
-    {
-      className: "h-40 w-40  top-80 left-56 absolute",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 3,
-    },
-    {
-      className: "h-32 w-10  -top-40 -left-60 absolute",
-      repeatDelay: 0.2,
-      delay: 0.3,
-      duration: 0.9,
-    },
-    {
-      className: "h-32 w-10  -bottom-60 -left-80 absolute",
-      repeatDelay: 5,
-      delay: 1,
-      duration: 1.3,
-    },
-    {
-      className: "h-2 w-2  -bottom-80 -left-96 absolute -rotate-90",
-      repeatDelay: 2,
-      delay: 0,
-      duration: 2.7,
-    },
-    { className: "hidden", repeatDelay: 2, delay: 2, duration: 2 },
-    {
-      className: "h-40 w-40  bottom-40 left-0 absolute rotate-90",
-      repeatDelay: 1.8,
-      delay: 0.3,
-      duration: 2.2,
-    },
-    {
-      className: "h-80 w-80  bottom-24 -right-60 absolute rotate-180",
-      repeatDelay: 2.4,
-      delay: 0.4,
-      duration: 2.1,
-    },
-    {
-      className: "h-40 w-40  bottom-0 -right-56 absolute",
-      repeatDelay: 2.9,
-      delay: 3,
-      duration: 2.12,
-    },
-  ]
-
-  const [classIndex, setClassIndex] = useState(0)
-  const [isAnimating, setIsAnimating] = useState(false)
-
-  const getRandomIndex = useCallback((excludeIndex: number, length: number) => {
-    let randomIndex
-    do {
-      randomIndex = Math.floor(Math.random() * length)
-    } while (randomIndex === excludeIndex)
-    return randomIndex
-  }, [])
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsAnimating(true) // Start animation
-      setTimeout(() => {
-        setClassIndex((prevIndex) => getRandomIndex(prevIndex, beams.length))
-
-        setIsAnimating(false) // Allow animation to complete
-      }, 2000) // Synchronize with the animation duration
-    }, 2000)
-
-    return () => clearInterval(interval)
-  }, [beams.length, getRandomIndex])
-
-  console.log(classIndex)
-
-  if (isAnimating) return <></>
-
-  return (
-    <>
-      {[1, 2, 3].map((_, i) => (
-        <Beam
-          key={i}
-          className={beams[classIndex]?.className}
-          delay={beams[classIndex]?.delay}
-          duration={beams[classIndex]?.duration}
-          repeatDelay={beams[classIndex]?.repeatDelay}
-        />
-      ))}
-    </>
-  )
-}
-
-// const RandomArrayRenderer = () => {
-//   const [arrayLength, setArrayLength] = useState(1)
-
-//   useEffect(() => {
-//     const interval = setInterval(
-//       () => {
-//         // Generate a random number between 1 and 6
-//         const randomLength = Math.floor(Math.random() * 6) + 1
-//         setArrayLength(randomLength)
-//       },
-//       Math.random() * 1000 + 2000
-//     ) // Random interval between 2-3 seconds
-
-//     return () => clearInterval(interval) // Cleanup interval on component unmount
-//   }, [])
-
-//   return (
-//     <div>
-//       {Array(arrayLength)
-//         .fill(null)
-//         .map((_, i) => (
-//           <DemoComponent key={i} />
-//         ))}
-//     </div>
-//   )
-// }
