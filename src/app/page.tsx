@@ -3,13 +3,16 @@ import ResumeSectionWrapper from "./_components/resume-section-wrapper"
 import { Star } from "@/components/star-icon"
 import { BackgroundWithAnim } from "@/components/layout/background-with-anim"
 import { TypingEffect } from "./_components/typing-effect"
+import { GridBeam } from "@/components/ui/grid-beam"
 
 export default function Home() {
   return (
     <>
       <BackgroundWithAnim>
-        <section className="flex h-[calc(100vh-100px)] justify-center items-center w-full flex-col">
+        <section className="relative flex h-[calc(100vh-100px)] justify-center items-center w-full flex-col">
           <div className="relative flex flex-col items-center justify-center -translate-y-[120px] md:-translate-y-[120px]">
+            <GridBeam />
+
             <TypingEffect />
             <p className="mb-4 text-sm sm:text-base md:text-xl 2xl:text-3xl">
               Full Stack Dev.

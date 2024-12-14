@@ -36,7 +36,7 @@ export default function Changelog() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/device-flow.png"
+              src="/axai-y/device-flow.png"
               alt="Device Flow by Edify"
               width={500}
               height={500}
@@ -44,7 +44,7 @@ export default function Changelog() {
             />
 
             <Image
-              src="/edify.png"
+              src="/axai-y/edify.png"
               alt="Edify"
               width={500}
               height={500}
@@ -59,7 +59,7 @@ export default function Changelog() {
       content: (
         <div>
           <p className="mb-8 font-normal text-neutral-800 dark:text-neutral-200">
-            intern at Cynohub, an edu-tech company as a React.js mentor and
+            {/* intern at Cynohub, an edu-tech company as a React.js mentor and
             after that joined as an intern at Edify, built a landing page{" "}
             <Link
               href="https://edify.club"
@@ -68,18 +68,28 @@ export default function Changelog() {
             >
               edify.club
             </Link>{" "}
-            with good performance, trackers, seo and optimization
+            with great performance, trackers, seo and optimization */}
+            intern at Cynohub, an edu-tech company as a React.js Mentor. Later,
+            at Edify built and optimized the{" "}
+            <Link
+              href="https://edify.club"
+              target="_blank"
+              className="underline p-0 m-0 w-fit  font-bold"
+            >
+              edify.club
+            </Link>{" "}
+            landing page for performance, tracking, SEO, and overall efficiency.
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/cynohub3.png"
+              src="/axai-y/cynohub3.png"
               alt="Cynohub"
               width={500}
               height={500}
               className="aspect-video w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/edify-landing.png"
+              src="/axai-y/edify-landing.png"
               alt="Edify landing page"
               width={500}
               height={500}
@@ -99,14 +109,14 @@ export default function Changelog() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/college.jpeg"
+              src="/axai-y/college.jpeg"
               alt="Malla Reddy College"
               width={500}
               height={500}
               className="aspect-video w-full rounded-lg object-cover shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
             />
             <Image
-              src="/petcart.png"
+              src="/axai-y/petcart.png"
               alt="Project I've made"
               width={500}
               height={500}
