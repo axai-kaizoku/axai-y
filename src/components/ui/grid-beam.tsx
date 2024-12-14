@@ -7,195 +7,169 @@ import { cn } from "@/lib/utils"
 export const GridBeam = () => {
   const beams = [
     {
-      className: "h-40 w-40 border top-32 left-80 absolute",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-40 w-40 top-20 left-20 sm:top-32 sm:left-[22rem] absolute rotate-0 sm:rotate-90",
+      duration: 1.8,
     },
     {
-      className: "h-40 w-40 border top-96 -left-80 absolute",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-40 w-40 top-0 left-0 sm:top-96 sm:-left-80 absolute max-sm:translate max-sm:-scale-y-100",
+      duration: 1.8,
     },
-    { className: "hidden", repeatDelay: 0, delay: 0, duration: 2 },
+    { className: "hidden", duration: 1.8 },
     {
-      className: "h-40 w-40 border -bottom-80 left-[44rem] absolute rotate-90",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-40 w-40 bottom-32 left-0 sm:-bottom-80 sm:left-[44rem] absolute -rotate-180",
+      duration: 1.8,
     },
     {
-      className: "h-40 w-40 border top-96 -left-40 absolute rotate-180",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-40 w-40 top-16 -left-28 sm:top-96 sm:-left-40 absolute rotate-90 sm:rotate-180",
+      duration: 1.8,
     },
     {
-      className: "h-20 w-40 border top-32 left-24 absolute -rotate-180",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-20 w-40 top-10 left-32 sm:top-32 sm:-left-60 absolute rotate-180 transform -scale-x-100 ",
+      duration: 1.8,
     },
     {
-      className: "h-40 w-40 border bottom-14 right-0 absolute",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-40 w-40 bottom-10 right-0 sm:bottom-10 sm:-right-48 absolute transform -scale-x-100",
+      duration: 1.8,
     },
-    { className: "hidden", repeatDelay: 0, delay: 0, duration: 2 },
+    { className: "hidden", duration: 1.8 },
     {
-      className: "h-40 w-40 border top-80 left-56 absolute",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-40 w-40 top-80 left-0 sm:top-80 sm:left-96 absolute transform -scale-x-100 -scale-y-100",
+      duration: 1.8,
     },
     {
-      className: "h-32 w-10 border -top-40 -left-60 absolute",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-32 w-10 top-0 left-0 sm:-top-60 sm:-left-60 absolute transform rotate-180",
+      duration: 1.8,
     },
     {
-      className: "h-32 w-10 border -bottom-60 -left-80 absolute",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-32 w-10 bottom-0 left-0 sm:-bottom-60 sm:-left-80 absolute transform -scale-x-100",
+      duration: 1.8,
     },
     {
-      className: "h-2 w-2 border -bottom-80 -left-96 absolute -rotate-90",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-2 w-2 bottom-0 -left-10 sm:-bottom-80 sm:-left-96 absolute -rotate-90",
+      duration: 1.8,
     },
-    { className: "hidden", repeatDelay: 0, delay: 0, duration: 2 },
+    { className: "hidden", duration: 1.8 },
     {
-      className: "h-40 w-40 border bottom-40 left-0 absolute rotate-90",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-40 w-40 bottom-0 -left-10 sm:bottom-36 sm:-left-16 absolute rotate-90 transform -scale-y-100",
+      duration: 1.8,
     },
     {
-      className: "h-80 w-80 border bottom-24 -right-60 absolute rotate-180",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-20 w-40 bottom-20 right-0 sm:bottom-24 sm:-right-96 absolute ",
+      duration: 1.8,
     },
     {
-      className: "h-40 w-40 border bottom-0 -right-56 absolute",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2,
+      className:
+        "h-40 w-40 bottom-0 -left-10 sm:bottom-0 sm:-right-56 absolute",
+      duration: 1.8,
     },
   ] as const
 
   const lateBeams = [
     {
-      className: "h-40 w-40 border top-32 left-80 absolute",
-      repeatDelay: 0,
-      delay: 0,
+      className:
+        "h-40 w-40 top-20 left-20 sm:top-32 sm:left-[22rem] absolute rotate-0 sm:rotate-90",
       duration: 2.8,
     },
     {
-      className: "h-40 w-40 border top-96 -left-80 absolute",
-      repeatDelay: 0,
-      delay: 0,
+      className:
+        "h-40 w-40 top-0 left-0 sm:top-96 sm:-left-80 absolute max-sm:translate max-sm:-scale-y-100",
       duration: 2.8,
     },
-    { className: "hidden", repeatDelay: 0, delay: 0, duration: 2.8 },
+    { className: "hidden", duration: 2.8 },
     {
-      className: "h-40 w-40 border -bottom-80 left-[44rem] absolute rotate-90",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2.8,
-    },
-    {
-      className: "h-40 w-40 border top-96 -left-40 absolute rotate-180",
-      repeatDelay: 0,
-      delay: 0,
+      className:
+        "h-40 w-40 bottom-32 left-0 sm:-bottom-80 sm:left-[44rem] absolute -rotate-180",
       duration: 2.8,
     },
     {
-      className: "h-20 w-40 border top-32 left-24 absolute -rotate-180",
-      repeatDelay: 0,
-      delay: 0,
+      className:
+        "h-40 w-40 top-16 -left-28 sm:top-96 sm:-left-40 absolute rotate-90 sm:rotate-180",
       duration: 2.8,
     },
     {
-      className: "h-40 w-40 border bottom-14 right-0 absolute",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2.8,
-    },
-    { className: "hidden", repeatDelay: 0, delay: 0, duration: 2.8 },
-    {
-      className: "h-40 w-40 border top-80 left-56 absolute",
-      repeatDelay: 0,
-      delay: 0,
+      className:
+        "h-20 w-40 top-10 left-32 sm:top-32 sm:-left-60 absolute rotate-180 transform -scale-x-100 ",
       duration: 2.8,
     },
     {
-      className: "h-32 w-10 border -top-40 -left-60 absolute",
-      repeatDelay: 0,
-      delay: 0,
+      className:
+        "h-40 w-40 bottom-10 right-0 sm:bottom-10 sm:-right-48 absolute transform -scale-x-100",
+      duration: 2.8,
+    },
+    { className: "hidden", duration: 2.8 },
+    {
+      className:
+        "h-40 w-40 top-80 left-0 sm:top-80 sm:left-96 absolute transform -scale-x-100 -scale-y-100",
       duration: 2.8,
     },
     {
-      className: "h-32 w-10 border -bottom-60 -left-80 absolute",
-      repeatDelay: 0,
-      delay: 0,
+      className:
+        "h-32 w-10 top-0 left-0 sm:-top-60 sm:-left-60 absolute transform rotate-180",
       duration: 2.8,
     },
     {
-      className: "h-2 w-2 border -bottom-80 -left-96 absolute -rotate-90",
-      repeatDelay: 0,
-      delay: 0,
-      duration: 2.8,
-    },
-    { className: "hidden", repeatDelay: 0, delay: 0, duration: 2.8 },
-    {
-      className: "h-40 w-40 border bottom-40 left-0 absolute rotate-90",
-      repeatDelay: 0,
-      delay: 0,
+      className:
+        "h-32 w-10 bottom-0 left-0 sm:-bottom-60 sm:-left-80 absolute transform -scale-x-100",
       duration: 2.8,
     },
     {
-      className: "h-80 w-80 border bottom-24 -right-60 absolute rotate-180",
-      repeatDelay: 0,
-      delay: 0,
+      className:
+        "h-2 w-2 bottom-0 -left-10 sm:-bottom-80 sm:-left-96 absolute -rotate-90",
+      duration: 2.8,
+    },
+    { className: "hidden", duration: 2.8 },
+    {
+      className:
+        "h-40 w-40 bottom-0 -left-10 sm:bottom-36 sm:-left-16 absolute rotate-90 transform -scale-y-100",
       duration: 2.8,
     },
     {
-      className: "h-40 w-40 border bottom-0 -right-56 absolute",
-      repeatDelay: 0,
-      delay: 0,
+      className:
+        "h-20 w-40 bottom-20 right-0 sm:bottom-24 sm:-right-96 absolute ",
+      duration: 2.8,
+    },
+    {
+      className:
+        "h-40 w-40 bottom-0 -left-10 sm:bottom-0 sm:-right-56 absolute",
       duration: 2.8,
     },
   ] as const
 
+  const aroundNameSide = [
+    "h-40 w-24  -left-32 -top-20 absolute",
+    "h-40 w-40  bottom-10 -right-48 absolute transform -scale-x-100",
+    "h-40 w-20  -bottom-20 -right-32 absolute transform -scale-y-100 -scale-x-100",
+    "h-40 w-32  -left-36 top-10  absolute transform -scale-y-100",
+  ] as const
+
+  const aroundNameTop = [
+    "h-40 w-40  bottom-36 -left-16 absolute rotate-90 transform -scale-y-100",
+    "h-40 w-40  top-20 -left-16 absolute rotate-90 transform -scale-x-100 -scale-y-100",
+    "h-40 w-40  bottom-36 left-96 absolute rotate-90",
+    "h-40 w-40  top-20 left-96 absolute rotate-90 transform -scale-x-100",
+  ] as const
+
   const [randNum, setRandNum] = useState<number[]>([2, 3, 4])
   const [secNum, setSecNum] = useState<number[]>([0])
-
-  // useEffect(() => {
-  //   const generateRandomNumbers = () => {
-  //     const numbers = Array.from({ length: 1 }, () =>
-  //       Math.floor(Math.random() * 17)
-  //     )
-  //     setRandNum(numbers)
-  //   }
-
-  //   generateRandomNumbers() // Generate numbers initially
-  //   const interval = setInterval(generateRandomNumbers, 2000) // Update every 2 seconds
-
-  //   return () => clearInterval(interval) // Cleanup on unmount
-  // }, [])
 
   useEffect(() => {
     const generateRandomNumbers = () => {
       const length = Math.floor(Math.random() * 3) + 1 // Ensures 1 to 3 elements
       const numbers = Array.from({ length }, () =>
         Math.floor(Math.random() * 17)
-      ) // Random values between 1 and 3
+      ) // Random values between 1 and 16
       setRandNum(numbers)
     }
 
@@ -221,49 +195,31 @@ export const GridBeam = () => {
 
   return (
     <>
-      {/* {beams[randNum[0]]?.duration} */}
+      {randNum[0] ? (
+        <Beam
+          className={beams[randNum[0]]?.className}
+          duration={beams[randNum[0]]?.duration}
+        />
+      ) : null}
 
-      <Beam
-        className={beams[randNum[0]]?.className}
-        delay={beams[randNum[0]]?.delay}
-        duration={beams[randNum[0]]?.duration}
-        repeatDelay={beams[randNum[0]]?.repeatDelay}
-      />
-      {randNum.length}
-      {randNum.length === 2 && (
+      {randNum.length === 2 && randNum[1] ? (
         <Beam
           className={beams[randNum[1]]?.className}
-          delay={beams[randNum[1]]?.delay}
           duration={beams[randNum[1]]?.duration}
-          repeatDelay={beams[randNum[1]]?.repeatDelay}
         />
-      )}
-      <Beam
-        className={lateBeams[secNum[0]]?.className}
-        delay={lateBeams[secNum[0]]?.delay}
-        duration={lateBeams[secNum[0]]?.duration}
-        repeatDelay={lateBeams[secNum[0]]?.repeatDelay}
-      />
-
-      {/* <Beam
-        className={beams[randNum[1]]?.className}
-        delay={beams[randNum[1]]?.delay}
-        duration={beams[randNum[1]]?.duration}
-        repeatDelay={beams[randNum[1]]?.repeatDelay}
-      />
-      <Beam
-        className={beams[randNum[2]]?.className}
-        delay={beams[randNum[2]]?.delay}
-        duration={beams[randNum[2]]?.duration}
-        repeatDelay={beams[randNum[2]]?.repeatDelay}
-      /> */}
+      ) : null}
+      {secNum[0] ? (
+        <Beam
+          className={lateBeams[secNum[0]]?.className}
+          duration={lateBeams[secNum[0]]?.duration}
+        />
+      ) : null}
+      {/* <Beam className={beams[15].className} duration={1.8} /> */}
     </>
   )
 }
 
-export type BeamOptions = {
-  repeatDelay?: number
-  delay?: number
+type BeamOptions = {
   duration?: number
   className?: string
 }
@@ -311,14 +267,21 @@ export const Beam = (beamOption: BeamOptions) => {
               repeat: Infinity,
               repeatType: "loop",
               ease: "linear",
-              delay: beamOption.delay,
-              repeatDelay: beamOption.repeatDelay,
+              delay: 0,
+              repeatDelay: 0,
             }}
           >
-            <stop stopColor="#18CCFC" stopOpacity="0" />
-            <stop stopColor="#18CCFC" />
-            <stop offset="0.325" stopColor="#6344F5" />
+            {/* <stop stopColor="#18CCFC" stopOpacity="0" />
+            <stop stopColor="#18CCFC" /> */}
+            {/* <stop stopColor="#18FB91" stopOpacity="0" />
+            <stop stopColor="#18FB91" /> */}
+            <stop stopColor="#18d6fb" stopOpacity="0" />
+            <stop stopColor="#18d6fb" />
+
+            {/* <stop offset="0.325" stopColor="#6344F5" /> */}
+            <stop offset="0.325" stopColor="#65f542" />
             <stop offset="1" stopColor="#AE48FF" stopOpacity="0" />
+            {/* <stop offset="1" stopColor="#34D399" stopOpacity="0" /> */}
           </motion.linearGradient>
         </defs>
       </svg>
