@@ -4,6 +4,7 @@ import { Star } from "@/components/star-icon"
 import { BackgroundWithAnim } from "@/components/layout/background-with-anim"
 import { TypingEffect } from "./_components/typing-effect"
 import { GridBeam } from "@/components/ui/grid-beam"
+import { CpuArchitecture } from "@/components/ui/cpu-architecture"
 
 export default function Home() {
   return (
@@ -25,6 +26,9 @@ export default function Home() {
           </div>
         </section>
       </BackgroundWithAnim>
+      <div className="p-4 rounded-xl bg-accent/20">
+        <CpuArchitecture />
+      </div>
       <ResumeSectionWrapper />
       {/* scroll btn */}
       <ScrollDown />
