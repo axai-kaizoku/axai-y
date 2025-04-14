@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Reveal from "./reveal"
+import { Skeleton } from "@/components/ui/skeleton"
 
 export default function ResumeSection() {
   return (
@@ -113,6 +114,42 @@ export default function ResumeSection() {
           </h3>
           <p className="mb-1">Working as a Frontend Developer in a startup</p>
         </Reveal>
+      </section>
+    </>
+  )
+}
+
+export function ResumeSecxSkeleton() {
+  return (
+    <>
+      <section className="mb-10">
+        <Skeleton className="h-8 w-1/2 mb-4" />
+        <ul className="list-disc pl-5">
+          <Skeleton className="h-4 w-3/4 mb-2" />
+          <Skeleton className="h-4 w-3/4 mb-2" />
+          <Skeleton className="h-4 w-3/4 mb-2" />
+        </ul>
+        <Skeleton className="my-10 h-0.5" />
+      </section>
+
+      <section id="resume-area" className="mb-20">
+        <Skeleton className="h-8 w-1/2 mb-10" />
+        <Skeleton className="h-6 w-1/3 mb-4" />
+        <Skeleton className="h-4 w-1/4 mb-2" />
+        <Skeleton className="h-4 w-1/3 mb-4" />
+        <Skeleton className="h-4 w-1/3 mb-4" />
+        <Skeleton className="my-10 h-0.5" />
+
+        <Skeleton className="h-6 w-1/2 mb-4" />
+        <Skeleton className="h-4 w-1/3 mb-2" />
+        <Skeleton className="h-4 w-1/4 mb-4" />
+        <Skeleton className="h-4 w-1/4 mb-4" />
+        <Skeleton className="my-10 h-0.5" />
+
+        <Skeleton className="h-6 w-1/2 mb-4" />
+        <Skeleton className="h-4 w-1/3 mb-2" />
+        <Skeleton className="h-4 w-1/4 mb-4" />
+        <Skeleton className="h-4 w-1/4 mb-4" />
       </section>
     </>
   )

@@ -1,8 +1,9 @@
 import type { Config } from "tailwindcss"
 import { fontFamily } from "tailwindcss/defaultTheme"
-
+//@ts-expect-error - // we don't have DT file for this module
 import { default as flattenColorPalette } from "tailwindcss/lib/util/flattenColorPalette"
 import svgToDataUri from "mini-svg-data-uri"
+import TailwindMerge from "tailwindcss-animate"
 
 const config = {
   darkMode: ["class"],
@@ -28,17 +29,17 @@ const config = {
       },
       colors: {
         brand: {
-          100: "#d1ffe6",
-          200: "#a3ffce",
-          300: "#74ffb5",
-          400: "#46ff9d",
-          500: "#18ff84",
-          600: "#13cc6a",
-          700: "#0e994f",
-          800: "#0a6635",
-          900: "#05331a",
+          "100": "#d1ffe6",
+          "200": "#a3ffce",
+          "300": "#74ffb5",
+          "400": "#46ff9d",
+          "500": "#18ff84",
+          "600": "#13cc6a",
+          "700": "#0e994f",
+          "800": "#0a6635",
+          "900": "#05331a",
         },
-        focus: `#32cd32`,
+        focus: "`#32cd32`",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -72,6 +73,13 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        chart: {
+          "1": "hsl(var(--chart-1))",
+          "2": "hsl(var(--chart-2))",
+          "3": "hsl(var(--chart-3))",
+          "4": "hsl(var(--chart-4))",
+          "5": "hsl(var(--chart-5))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -80,12 +88,20 @@ const config = {
       },
       keyframes: {
         "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
         },
         "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       animation: {
@@ -95,7 +111,7 @@ const config = {
     },
   },
   plugins: [
-    require("tailwindcss-animate"),
+    TailwindMerge,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(
         {
